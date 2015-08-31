@@ -1,0 +1,50 @@
+{
+  "site": {
+    "title": "sample",
+    "url": "http://www.sample.com:8080",
+    "listenPort": "8080",
+    "mailaddress": "mail@sample.com",
+    "log": "/var/log/colle.log",
+    "templateDir": "/var/www/template",
+    "assetsDir": "/var/www/assets",
+    "itemDays": 30,
+    "itemExpire": 40,
+    "pageNewItemCount": 50,
+    "pageRankItemCount": 20,
+    "service": {
+      "googleAnalyticsTrackingId": "XXXXXXXXXX"
+    }
+  },
+  "redis": {
+    "protocol": "tcp",
+    "server": "127.0.0.1:6379",
+    "databaseNo": 0
+  },
+  "feed": {
+    "category": [
+      { "dir": "sport", "label": "スポーツ" },
+      { "dir": "entame", "label": "エンタメ" },
+      { "dir": "tech", "label": "テクノロジー" },
+      { "dir": "life", "label": "ライフ" }
+    ],
+    "channel": [
+      { "url": "http://headlines.yahoo.co.jp/rss/storyfulv-c_spo.xml", "category": "sport", "isDict": false },
+      { "url": "http://headlines.yahoo.co.jp/rss/gekisaka-c_spo.xml", "category": "sport", "isDict": false },
+      { "url": "http://headlines.yahoo.co.jp/rss/nkgendai-c_ent.xml", "category": "entame", "isDict": false },
+      { "url": "http://headlines.yahoo.co.jp/rss/jct-c_ent.xml", "category": "entame", "isDict": false },
+      { "url": "http://headlines.yahoo.co.jp/rss/hatenan-c_sci.xml", "category": "tech", "isDict": false },
+      { "url": "http://headlines.yahoo.co.jp/rss/etype-c_sci.xml", "category": "tech", "isDict": false },
+      { "url": "http://headlines.yahoo.co.jp/rss/nallabout-c_life.xml", "category": "life", "isDict": false },
+      { "url": "http://headlines.yahoo.co.jp/rss/it_nlab-c_life.xml", "category": "life", "isDict": false }
+    ]
+  },
+  "dict": {
+    "use": [
+      "DMMR18ACT"
+    ],
+    "DMMR18ACT": {
+      "apiId": "XXXXXXXXXX",
+      "affiliateId": "XXXXXXXXXX"
+    }
+  }
+}

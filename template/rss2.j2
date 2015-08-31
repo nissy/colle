@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>{{ CONFIG.Site.Title }}</title>
+        <link>{{ CONFIG.Site.Url }}</link>
+        <description>{{ CONFIG.Site.Title }}</description>
+        <language>ja</language>{% for item in items %}
+        <item>
+            <title>{{ item.Title }}</title>
+            <link>{{ CONFIG.Site.Url }}/?id={{ item.Id }}</link>
+            <guid isPermaLink="flase">{{ item.Id }}</guid>
+            <pubDate>{{ item.PubDate }}</pubDate>
+            <description><![CDATA[{{ item.Content }}]]></description>
+        </item>{% endfor %}
+    </channel>
+</rss>
